@@ -5,7 +5,254 @@
  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Portifolio</title>
 <link rel="icon" href="Images/logo.jpg">
-<link rel="stylesheet" href="Styles/style01.css">
+  <style>
+  *{
+  box-sizing:border-box;
+  font-family:serif;
+}
+body{
+  margin:0;
+  padding:0;
+  background-color:#f2f2f2;
+ /* styling the content of the navigation bar across all the web pages */ 
+}
+#logo{
+  display:flex;
+  flex-direction:row;
+}
+#logo h3{
+  color:#83212b;
+  font-weight:600;
+}
+#logo img{
+  width:40px;
+  height:40px;
+  border-radius:100%;
+  box-shadow:2px 6px 6px rgba(0,0,0,0.33);
+}
+.nav-bar-container{
+  width:100%;
+  padding:0;
+  display:flex;
+  position:fixed;
+  flex-direction:row;
+  top:0; 
+  height:60px;
+  border-bottom:5px solid #832b21;
+  justify-content:space-between;
+  background-color:#ffffff;
+  box-shadow:2px 6px 6px rgba(0,0,0,0.33);
+  animation:nav 5s 1;
+}
+@keyframes nav{
+  0%{
+    Transform:translateY(-500px);
+  }
+  25%{
+    Transform:translateY(0px);
+  }
+  50%{
+    Transform:translateY(0px);
+  }
+  75%{
+    Transform:translateY(0px);
+  }
+  100%{
+    Transform:translateY(0px);
+  }
+}
+
+.nav-bar-container img{
+  width:30px;
+  height:30px;
+  border-radius:100%;
+  margin:10px;
+}
+.nav-bar{
+  position:relative;
+  display:inline-block;
+}
+.nav-bar .nav-img{
+  width:30px;
+  height:30px;
+  float:right ;
+  margin-left:0px;
+  border:1px solid red;
+  cursor:pointer;
+  border-radius:100%;
+}
+.nav-img:hover{
+  border:2px solid #1cff15;
+}
+.nav-bar .content{
+  display:none;
+  width:40vh;
+  height:300px;
+  padding:5px;
+  border-radius:40px;
+  border:5px solid #832b21;
+  margin-left:50px;
+  background-color:white;
+  box-shadow:2px 6px 6px rgba(0,0,0,0.33);
+  animation:container 5s 1;
+}
+@keyframes container{
+  0%{
+    Transform:translateY(-1000px);
+  }
+  25%{
+    Transform:translateY(0px);
+  }
+  50%{
+    Transform:translateY(0px);
+  }
+  75%{
+    Transform:translateY(0px);
+  }
+  100%{
+    Transform:translateY(0px);
+  }
+}
+
+.nav-bar .content ul{
+  list-style-type:none;
+  text-align:center;
+  padding:40px 50px;
+  
+}
+.nav-bar .content ul li{
+  margin-bottom:10px;
+}
+.nav-bar .content a{
+  text-decoration:none;
+  color:#832b21;
+  font-size:20px;
+  text-align:center;
+  font-weight:600;
+}
+#active{
+  color:#832b21;
+  -webkit-text-stroke:1px #1cff15;
+}
+.nav-bar .content .hide-btn{
+  width:30px;
+  height:30px;
+  float:right;
+  cursor:pointer;
+  border-radius:100%;
+  margin-right:10px;
+  margin-bottom:50px;
+}
+.hide-btn:hover{
+  border:2px solid #1cff15;
+}
+/* styling the content inside Homepage page */
+.porti-card-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:20%;
+  padding:10px ;
+}
+.porti-card{
+  margin:10px;
+  width:350px;
+  height:850px;
+  background-color:#ffffff;
+  padding:15px; 
+  border-radius:30px;
+  box-shadow: 6px 6px 6px #cdced1, -6px -6px 6px #cdced1; 
+}
+.porti-card img{
+  width:100%;
+  height:300px;
+  margin:10px auto; 
+  border-radius:30px;   
+  border:2px solid #1cff15;
+}
+.porti-card h3{
+  color:#ff8955;
+  font-weight:600;
+  border-radius:30px;
+  border:2px solid #832b21;
+  text-align:center;
+  -webkit-text-stroke:1px #832b21;
+}
+.porti-card  p{
+  border-radius:30px;
+  border:2px solid #832b21;
+  padding:10px; background-image:linear-gradient(#1cff15, #378a17);
+}
+.porti-card  h5, h1{
+  padding:10px; 
+  color:#ffffff;
+  text-align:center;
+  padding:10px;
+  border-radius:30px;
+  -webkit-text-stroke:0.5px #1cff15;
+background-image:linear-gradient(#832b21, #4b1906);
+}
+.glowing-button {
+   background-color: #832b21;   
+   color: #1cff15;
+   border: none; 
+   width:100%;
+   padding: 10px 20px;   
+   font-weight:600;
+   font-size: 14px;
+   cursor: pointer;
+   border-radius: 50px;   
+   border:0.3px solid #1cff15;
+   box-shadow: 0 0 8px #832b21;
+   transition: box-shadow 0.5s ease-in-out;
+}
+
+.glowing-button:hover {
+   border:2px solid #1cff15;
+   box-shadow: 0 0 10px #832b21, 0 0 20px #832b21, 0 0 30px #832b21;
+}
+
+/* styling the content inside service page */
+
+.image-card-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center; 
+  margin-top:30%;
+}
+
+.image-card{
+  margin:20px;
+  width:280px;
+  height:400px;
+  background-color:#ffffff;
+  padding:10px;
+  border-radius:30px;
+  box-shadow: 6px 6px 6px #cdced1, -6px -6px 6px #cdced1;
+}
+.image-card img{
+  width:100%;
+  height:200px;
+  border-radius:30px 30px 0 0;
+  object-fit:cover;  
+}
+.image-card summary{
+  color:#ffffff;
+  font-weight:600;    background-image:linear-gradient(#1cff15, #378a17);
+  color:#832b21;
+  padding:10px ;
+  border-radius:20px;
+}
+@media only screen and (max-width:780){
+ .image-card{
+  width:100%;
+ }
+ .image-card-container{
+   margin-top:10%;
+ }
+}
+   
+  </style>
 </head>
 <body>
  <!-- Navigation containers -->
@@ -45,6 +292,21 @@
 <button type="submit" class="glowing-button">Downlord CV</button>
 </div>
 </div>
-<script src="Styles/script.js"></script> 
+<script>
+  const showNav = document.querySelector('.btn-img');
+  const hideNav = document.querySelector('.hide-btn');
+  const navCont = document.querySelector('.content');
+ 
+showNav.addEventListener('click', ()=>{
+  navCont.style.display="block";
+  showNav.style.display="none";
+  
+  
+});
+hideNav.addEventListener('click', ()=>{
+  navCont.style.display="none";
+  showNav.style.display="block";
+});
+</script> 
 </body>
 </html>  
